@@ -1,0 +1,8 @@
+metrics_comparison
+
+model,task,accuracy,f1,jaccard,mae,mse,r2,notes
+LinearRegression,regression,,,,0.2563250127,0.1157232930,0.4271186910,"Baseline regression on RainTomorrow (not ideal for binary target); metrics reported in notebook."
+KNN (k=4),classification,0.818321,0.596610,0.425121,,,,"Strong baseline classifier; metrics reported in notebook."
+DecisionTreeRegressor (max_depth=8),regression,,,,0.1712308284,0.2387325565,0.1523319240,"Notebook prints MAE/MSE/R2 as shown; later table appears to swap MAE and MSE due to variable ordering—using printed MAE/MSE/R2 values."
+LogisticRegression (C=0.01, liblinear),classification,,,0.5426008969,,,,"Jaccard reported; confusion matrix reported. F1/Accuracy not explicitly printed in provided output."
+SVM (RBF),classification,0.72,0.00,,"","","","Classification report shows model predicts no positive class (rain=1) in provided output; not decision-usable without rebalancing/tuning."
